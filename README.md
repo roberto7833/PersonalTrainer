@@ -5,4 +5,4 @@ da disciplina de Engenharia de Software, ministrada pelo Profº Dorgival
 Netto, onde temos o objetivo de atender e analisar todos os requisitos de um
 cliente real, utilizando as diversas práticas da Engenharia de Software.
 
-<img width="1281" height="1149" alt="Class Diagram0" src="https://github.com/user-attachments/assets/50370ce2-5437-43c4-a328-c52953fd65aa" />
+<img width="1281" height="1149" alt="Class Diagram0" src="https://github.com/user-attachments/assets/5c216452-a752-450b-9d33-a12ad88395c9" />

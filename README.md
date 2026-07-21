@@ -1,4 +1,4 @@
-# APS
+# Sistema Personal Trainer
 Somos alunos do curso de Ciência da Computação da Universidade Federal
 da Paraiba (UFPB) Campus IV Rio Tinto. Fazemos parte de um projeto
 da disciplina de Engenharia de Software, ministrada pelo Profº Dorgival

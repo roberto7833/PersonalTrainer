@@ -43,4 +43,42 @@ visualizar Histórico das mensalidades.
 Solicitar acompanhamento ou tirar dúvidas com o professor.
 deixar Feedback dos treinos.
 
+# Padrões de Projeto
+ 
+Método para criação de perfis de Usuário:
+Aplicação: As classes Aluno, Personal e Administrador utilizam herança a partir da classe Usuario. 
+Propósito: Encapsular a lógica de criação de cada perfil de usuário no sistema, permitindo instanciar o tipo correto com base nas permissões ou no parâmetro TipoDoPerfil (ADM, PERSONAL, ALUNO).
+Builder (para montagem de TreinoAluno):
+Aplicação: Na construção da rotina de treino do aluno (TreinoAluno), que é composta por uma coleção de objetos ItemExercicio e associada a um Exercicio.
+Propósito: Facilitar a criação gradual e configurável de uma ficha de treino, definindo divisões, repetições, séries, carga atual e tempo de descanso sem sobrecarregar construtores.
+2. Padrões Estruturais (Structural Patterns)
+Composite (para Estrutura do Treino):
+Aplicação: Associação entre TreinoAluno, ItemExercicio e Exercicio.
+Propósito: Tratar treinos compostos e exercícios individuais de maneira unificada, permitindo que um treino contenha agrupamentos de exercícios (como super-séries) de forma hierárquica.
+Facade (para Serviços do Sistema):
+Aplicação: Criação de uma camada de serviço (ex.: TreinoFacade ou UsuarioFacade) para intermediar a comunicação entre as visões (View) e as classes de modelo (Usuario, TreinoAluno, Conta).
+Propósito: Oferecer uma interface simplificada para as operações do sistema (como cadastrar aluno, prescrever treino e registrar feedback), reduzindo o acoplamento direto com as entidades.
+3. Padrões Comportamentais (Behavioral Patterns)
+State (para Gerenciamento de StatusTreino):
+Aplicação: Transição do ciclo de vida do treino representado pela enumation StatusTreino (PRESCRITO, EM_EXECUCAO, CONCLUIDO).
+Propósito: Encapsular os comportamentos específicos e as regras de transição que o treino assume quando passa de prescrever/agendar para execução pelo aluno e posterior conclusão.
+Observer (para Notificações de Acompanhamento e Feedback):
+Aplicação: Notificação do Personal sobre ações do Aluno (como registrar feedback, concluir treino ou tirar dúvidas).
+Propósito: Atualizar a visão do Personal Trainer em tempo real ou gerar alertas quando um evento relevante do aluno for registrado no sistema.
+Strategy (para Cálculo e Gerenciamento de Mensalidades):
+Aplicação: Regras de pagamento e acompanhamento de parcelas.
+Propósito: Encapsular diferentes formas/estratégias de pagamento e regras de cobrança (ex.: Pix, Cartão, Boleto) utilizadas para gerenciar a situação da mensalidade do aluno.
+4. Padrões Arquiteturais e de Persistência
+MVC (Model-View-Controller):
+Aplicação: Estruturação geral informada no documento de arquitetura.
+Camadas:
+Model: Contém os dados e a lógica de negócio (Usuario, Aluno, Personal, TreinoAluno, ItemExercicio, Exercicio, Conta).
+View: Interfaces Java (como JavaFX) para interação do Personal e do Aluno.
+Controller: Intermedia as solicitações das visões, acionando as regras de negócio do Model e atualizando a interface.
+DAO (Data Access Object) / Repository:
+Aplicação: Isolamento de acesso ao banco de dados relacional indicado na arquitetura.
+Propósito: Abstrair o acesso e as operações CRUD para as entidades persistes (UsuarioDAO, TreinoDAO, ContaDAO).
+
+
+
 <img width="1281" height="1149" alt="Class Diagram0" src="https://github.com/user-attachments/assets/5c216452-a752-450b-9d33-a12ad88395c9" />

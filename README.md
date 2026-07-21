@@ -46,11 +46,12 @@ deixar Feedback dos treinos.
 # Padrões de Projeto
  
 Método para criação de perfis de Usuário:
-Aplicação: As classes Aluno, Personal e Administrador utilizam herança a partir da classe Usuario. 
+1. Aplicação: As classes Aluno, Personal e Administrador utilizam herança a partir da classe Usuario. 
 Propósito: Encapsular a lógica de criação de cada perfil de usuário no sistema, permitindo instanciar o tipo correto com base nas permissões ou no parâmetro TipoDoPerfil (ADM, PERSONAL, ALUNO).
 Builder (para montagem de TreinoAluno):
 Aplicação: Na construção da rotina de treino do aluno (TreinoAluno), que é composta por uma coleção de objetos ItemExercicio e associada a um Exercicio.
 Propósito: Facilitar a criação gradual e configurável de uma ficha de treino, definindo divisões, repetições, séries, carga atual e tempo de descanso sem sobrecarregar construtores.
+
 2. Padrões Estruturais (Structural Patterns)
 Composite (para Estrutura do Treino):
 Aplicação: Associação entre TreinoAluno, ItemExercicio e Exercicio.
@@ -58,6 +59,7 @@ Propósito: Tratar treinos compostos e exercícios individuais de maneira unific
 Facade (para Serviços do Sistema):
 Aplicação: Criação de uma camada de serviço (ex.: TreinoFacade ou UsuarioFacade) para intermediar a comunicação entre as visões (View) e as classes de modelo (Usuario, TreinoAluno, Conta).
 Propósito: Oferecer uma interface simplificada para as operações do sistema (como cadastrar aluno, prescrever treino e registrar feedback), reduzindo o acoplamento direto com as entidades.
+
 3. Padrões Comportamentais (Behavioral Patterns)
 State (para Gerenciamento de StatusTreino):
 Aplicação: Transição do ciclo de vida do treino representado pela enumation StatusTreino (PRESCRITO, EM_EXECUCAO, CONCLUIDO).
@@ -68,6 +70,7 @@ Propósito: Atualizar a visão do Personal Trainer em tempo real ou gerar alerta
 Strategy (para Cálculo e Gerenciamento de Mensalidades):
 Aplicação: Regras de pagamento e acompanhamento de parcelas.
 Propósito: Encapsular diferentes formas/estratégias de pagamento e regras de cobrança (ex.: Pix, Cartão, Boleto) utilizadas para gerenciar a situação da mensalidade do aluno.
+
 4. Padrões Arquiteturais e de Persistência
 MVC (Model-View-Controller):
 Aplicação: Estruturação geral informada no documento de arquitetura.

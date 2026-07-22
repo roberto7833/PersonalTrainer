@@ -101,3 +101,7 @@ deixar Feedback dos treinos.
 * **Propósito:** Abstração do acesso e das operações CRUD para as entidades persistentes (`UsuarioDAO`, `TreinoDAO`, `ContaDAO`).
 
 <img width="1281" height="1149" alt="Class Diagram0" src="https://github.com/user-attachments/assets/5c216452-a752-450b-9d33-a12ad88395c9" />
+
+# Diagramas de Sequência
+
+![Diagrama de Sequencia](https://github.com/user-attachments/assets/xxxx-xxxx-xxxx)

@@ -104,4 +104,5 @@ deixar Feedback dos treinos.
 
 # Diagramas de Sequência
 
-![Diagrama de Sequencia](https://github.com/user-attachments/assets/xxxx-xxxx-xxxx)
+<img width="900" height="896" alt="Diagrama de sequencia APS" src="https://github.com/user-attachments/assets/15e77cad-182e-4ab8-b851-8883f0ce05d0" />
+
